@@ -1,0 +1,80 @@
+.root {
+  position: relative;
+}
+
+.button {
+  height: 28px;
+  padding: 0 10px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  border-radius: 8px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  background: rgba(255, 255, 255, 0.35);
+
+  font-size: 12px;
+  font-weight: 600;
+  color: #0f172a;
+
+  transition:
+    background 120ms ease,
+    border-color 120ms ease;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: rgba(15, 23, 42, 0.22);
+}
+
+.chevron {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+
+  min-width: 64px;
+  padding: 6px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(2, 6, 23, 0.12);
+
+  display: grid;
+  gap: 4px;
+  z-index: 60;
+}
+
+.item {
+  height: 28px;
+  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0f172a;
+  opacity: 0.85;
+
+  transition:
+    background 120ms ease,
+    opacity 120ms ease;
+}
+
+.item:hover {
+  background: rgba(26, 115, 232, 0.12);
+  opacity: 1;
+}
+
+.active {
+  background: rgba(26, 115, 232, 0.18);
+  opacity: 1;
+}

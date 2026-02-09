@@ -1,0 +1,88 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  background: #cfe1f7; /* як у макеті */
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.inner {
+  height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logoDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #1a73e8;
+}
+
+.brandText {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.2px;
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navLink {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0f172a;
+  padding: 6px 6px;
+  border-radius: 8px;
+  transition:
+    background 120ms ease,
+    opacity 120ms ease;
+}
+
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.45);
+  opacity: 1;
+}
+
+.chevron {
+  margin-left: 4px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+/* Responsive: сховати частину меню */
+@media (max-width: 920px) {
+  .nav {
+    gap: 10px;
+  }
+  .navLink {
+    font-size: 12px;
+    padding: 6px 4px;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav {
+    display: none;
+  }
+}

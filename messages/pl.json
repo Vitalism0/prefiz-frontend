@@ -1,0 +1,43 @@
+{
+  "header": {
+    "news": "Aktualności",
+    "offer": "Oferta",
+    "about": "O nas",
+    "projects": "Projekty",
+    "reviews": "Opinie",
+    "faq": "FAQ",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Nauka i technologia w fascynującej formie",
+    "text": "Organizujemy pokazy fizyczne, warsztaty oraz kursy IT dla przedszkoli, szkół i młodzieży. Nauka wciągająco i praktycznie.",
+    "btnOffer": "Zobacz ofertę",
+    "btnBook": "Zapytaj o termin"
+  },
+  "offerTiles": {
+    "title": "Nasza oferta - Aktualności",
+    "subtitle": "Sprawdź najnowsze informacje o pokazach, warsztatach i kursach IT.",
+    "tile1": "Warsztaty naukowe",
+    "tile2": "Kursy IT",
+    "tile3": "Pokazy fizyczne",
+    "tile4": "Zajęcia indywidualne"
+  },
+  "specialOffer": {
+    "title": "Oferta specjalna - kalendarz pokazów sezonowych",
+    "text": "W tej sekcji znajdziesz sezonowe pokazy i warsztaty. Sprawdź terminy i wybierz wydarzenie.",
+    "btn": "Zobacz kalendarz wydarzeń"
+  },
+  "reviews": {
+    "title": "Opinie klientów",
+    "subtitle": "Zobacz, co mówią rodzice i nauczyciele o naszych zajęciach."
+  },
+  "footer": {
+    "desc": "Otrzymuj informacje o nowych pokazach, warsztatach, kursach IT oraz wydarzeniach sezonowych.",
+    "emailPlaceholder": "Twój e-mail",
+    "subscribe": "Zapisz się",
+    "note": "Zapisując się, akceptujesz naszą Politykę prywatności i wyrażasz zgodę na otrzymywanie wiadomości.",
+    "quickLinks": "Szybkie linki",
+    "findUs": "Znajdź nas",
+    "rights": "Wszelkie prawa zastrzeżone."
+  }
+}
