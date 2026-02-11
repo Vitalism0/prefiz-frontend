@@ -1,30 +1,20 @@
 import css from "./ReviewsSection.module.css";
-
-const reviews = [
-  {
-    name: "Marek Nowak",
-    text: "Świetny pokaz fizyczny — dzieci były zachwycone! Dynamika i bardzo angażujące doświadczenia.",
-  },
-  {
-    name: "Anna Kowalska",
-    text: "Zamówiliśmy warsztaty i termin udało się ustalić bardzo szybko. Prowadzący miło i merytorycznie.",
-  },
-  {
-    name: "Katarzyna Wiśniewska",
-    text: "Kurs IT prowadzony profesjonalnie. Dziecko zrobiło duży progres i jest zmotywowane.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function ReviewsSection() {
+  const t = useTranslations("reviews");
+
+  const reviews = [
+    { name: t("r1.name"), text: t("r1.text") },
+    { name: t("r2.name"), text: t("r2.text") },
+    { name: t("r3.name"), text: t("r3.text") },
+  ];
+
   return (
     <section className="section">
       <div className="container">
-        <h2 className={css.title}>Opinie klientów</h2>
-        <p className={css.subtitle}>
-          Zobacz, co mówią placówki i rodzice o naszych pokazach, warsztatach
-          oraz kursach IT. Każde zajęcia dopasowujemy do wieku uczestników i
-          poziomu grupy.
-        </p>
+        <h2 className={css.title}>{t("title")}</h2>
+        <p className={css.subtitle}>{t("subtitle")}</p>
 
         <div className={css.grid}>
           {reviews.map((r) => (
@@ -37,10 +27,10 @@ export default function ReviewsSection() {
         </div>
 
         <div className={css.controls}>
-          <button className={css.arrow} aria-label="Previous">
+          <button className={css.arrow} aria-label={t("prev")}>
             ‹
           </button>
-          <button className={css.arrow} aria-label="Next">
+          <button className={css.arrow} aria-label={t("next")}>
             ›
           </button>
         </div>

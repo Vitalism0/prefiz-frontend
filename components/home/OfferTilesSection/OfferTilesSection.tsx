@@ -1,46 +1,42 @@
 import css from "./OfferTilesSection.module.css";
 import { Link } from "@/i18n/navigation";
 import { FlaskConical, Code2, CalendarDays, User } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const tiles = [
-  {
-    icon: FlaskConical,
-    title: "Warsztaty\nnaukowe",
-    href: "/oferta/warsztaty",
-  },
-  { icon: Code2, title: "Kursy\nIT", href: "/oferta/kursy-it" },
-  { icon: CalendarDays, title: "Pokazy\nfizyczne", href: "/oferta/pokazy" },
-  { icon: User, title: "Zajęcia\nindywidualne", href: "/oferta/indywidualne" },
-];
+  { icon: FlaskConical, href: "/oferta/warsztaty", key: "tile1" },
+  { icon: Code2, href: "/oferta/kursy-it", key: "tile2" },
+  { icon: CalendarDays, href: "/oferta/pokazy", key: "tile3" },
+  { icon: User, href: "/oferta/indywidualne", key: "tile4" },
+] as const;
 
 export default function OfferTilesSection() {
+  const tr = useTranslations("offerTiles");
+
   return (
     <section className={css.section}>
       <div className="container">
-        <h2 className={css.title}>Nasza oferta - Aktualności</h2>
-        <p className={css.subtitle}>
-          Sprawdź najnowsze informacje o pokazach, warsztatach i kursach IT.
-          Publikujemy zapowiedzi wydarzeń, terminy zapisów oraz krótkie relacje
-          z realizacji.
-        </p>
+        <h2 className={css.title}>{tr("title")}</h2>
+        <p className={css.subtitle}>{tr("subtitle")}</p>
 
         <div className={css.grid}>
-          {tiles.map((t) => {
-            const Icon = t.icon;
+          {tiles.map((tile) => {
+            const Icon = tile.icon;
+            const title = tr(tile.key);
+
             return (
-              <Link key={t.href} href={t.href} className={css.card}>
+              <Link key={tile.href} href={tile.href} className={css.card}>
                 <Icon className={css.icon} />
                 <h3 className={css.cardTitle}>
-                  {t.title.split("\n").map((line, i) => (
+                  {title.split("\n").map((line, i) => (
                     <span key={i}>
                       {line}
                       <br />
                     </span>
                   ))}
                 </h3>
-                <p className={css.cardText}>
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
+
+                <p className={css.cardText}>{tr("cardText")}</p>
               </Link>
             );
           })}

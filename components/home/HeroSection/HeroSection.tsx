@@ -1,27 +1,33 @@
 import css from "./HeroSection.module.css";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("hero");
+
   return (
     <section className={css.hero}>
       <div className={css.overlay} />
       <div className={`${css.inner} container`}>
         <h1 className={css.title}>
-          Nauka i technologia w <br /> fascynującej formie
+          {t("title")
+            .split("\n")
+            .map((line, i) => (
+              <span key={i}>
+                {line}
+                <br />
+              </span>
+            ))}
         </h1>
 
-        <p className={css.text}>
-          Organizujemy pokazy fizyczne, warsztaty oraz kursy IT dla przedszkoli,
-          szkół i młodzieży. Każde wydarzenie dopasowujemy do konkretnej grupy
-          wiekowej i poziomu uczestników.
-        </p>
+        <p className={css.text}>{t("text")}</p>
 
         <div className={css.actions}>
           <Link href="/oferta" className={`btn btnPrimary ${css.btn}`}>
-            Zobacz ofertę
+            {t("btnOffer")}
           </Link>
           <Link href="/kalendarz" className={`btn btnSecondary ${css.btn}`}>
-            Zapytaj o termin
+            {t("btnBook")}
           </Link>
         </div>
       </div>

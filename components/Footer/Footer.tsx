@@ -8,8 +8,11 @@ import {
   Lightbulb,
 } from "lucide-react";
 import NewsletterForm from "./NewsletterForm";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer className={css.footer}>
       <div className="container">
@@ -22,75 +25,85 @@ export default function Footer() {
               <span className={css.brand}>PreFiz</span>
             </div>
 
-            <p className={css.desc}>
-              Otrzymuj informacje o nowych pokazach, warsztatach, kursach IT
-              oraz wydarzeniach sezonowych.
-            </p>
+            <p className={css.desc}>{t("desc")}</p>
 
             <NewsletterForm />
 
-            <p className={css.note}>
-              Zapisując się, akceptujesz naszą Politykę prywatności i wyrażasz
-              zgodę na otrzymywanie wiadomości.
-            </p>
+            <p className={css.note}>{t("note")}</p>
 
             <p className={css.copy}>
-              © {new Date().getFullYear()} PreFiz. Wszelkie prawa zastrzeżone.
+              © {new Date().getFullYear()} PreFiz. {t("rights")}
             </p>
           </div>
 
           <div className={css.right}>
             <div className={css.col}>
-              <h3 className={css.colTitle}>Szybkie linki</h3>
+              <h3 className={css.colTitle}>{t("quickLinks")}</h3>
               <ul className={css.list}>
                 <li>
                   <Link className={css.link} href="/o-nas">
-                    O nas
+                    {t("links.about")}
                   </Link>
                 </li>
                 <li>
                   <Link className={css.link} href="/faq">
-                    FAQ
+                    {t("links.faq")}
                   </Link>
                 </li>
                 <li>
                   <Link className={css.link} href="/kontakt">
-                    Kontakt
+                    {t("links.contact")}
                   </Link>
                 </li>
                 <li>
                   <Link className={css.link} href="/projekty">
-                    Zrealizowane projekty
+                    {t("links.projects")}
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div className={css.col}>
-              <h3 className={css.colTitle}>Znajdź nas</h3>
+              <h3 className={css.colTitle}>{t("findUs")}</h3>
               <ul className={css.list}>
                 <li>
-                  <a className={css.social} href="#" aria-label="Facebook">
+                  <a
+                    className={css.social}
+                    href="#"
+                    aria-label={t("social.facebook")}
+                  >
                     <Facebook size={16} />
-                    Facebook
+                    {t("social.facebook")}
                   </a>
                 </li>
                 <li>
-                  <a className={css.social} href="#" aria-label="Instagram">
+                  <a
+                    className={css.social}
+                    href="#"
+                    aria-label={t("social.instagram")}
+                  >
                     <Instagram size={16} />
-                    Instagram
+                    {t("social.instagram")}
                   </a>
                 </li>
                 <li>
-                  <a className={css.social} href="#" aria-label="LinkedIn">
+                  <a
+                    className={css.social}
+                    href="#"
+                    aria-label={t("social.linkedin")}
+                  >
                     <Linkedin size={16} />
-                    LinkedIn
+                    {t("social.linkedin")}
                   </a>
                 </li>
                 <li>
-                  <a className={css.social} href="#" aria-label="YouTube">
+                  <a
+                    className={css.social}
+                    href="#"
+                    aria-label={t("social.youtube")}
+                  >
                     <Youtube size={16} />
-                    YouTube
+                    {t("social.youtube")}
                   </a>
                 </li>
               </ul>

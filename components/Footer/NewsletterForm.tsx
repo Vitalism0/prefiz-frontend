@@ -1,18 +1,21 @@
 "use client";
 
 import css from "./Footer.module.css";
+import { useTranslations } from "next-intl";
 
 export default function NewsletterForm() {
+  const t = useTranslations("footer");
+
   return (
     <form className={css.form} onSubmit={(e) => e.preventDefault()}>
       <input
         className={css.input}
         type="email"
-        placeholder="Twój e-mail"
-        aria-label="Twój e-mail"
+        placeholder={t("emailPlaceholder")}
+        aria-label={t("emailPlaceholder")}
       />
       <button className={css.button} type="submit">
-        Zapisz się
+        {t("subscribe")}
       </button>
     </form>
   );

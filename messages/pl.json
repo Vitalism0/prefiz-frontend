@@ -16,20 +16,36 @@
   },
   "offerTiles": {
     "title": "Nasza oferta - Aktualności",
-    "subtitle": "Sprawdź najnowsze informacje o pokazach, warsztatach i kursach IT.",
+    "subtitle": "Sprawdź najnowsze informacje o pokazach, warsztatach i kursach IT.Publikujemy zapowiedzi wydarzeń, terminy zapisów oraz krótkie relacje z realizacji.",
     "tile1": "Warsztaty naukowe",
     "tile2": "Kursy IT",
     "tile3": "Pokazy fizyczne",
-    "tile4": "Zajęcia indywidualne"
+    "tile4": "Zajęcia indywidualne",
+    "cardText": "Sprawdź szczegóły i dopasuj zajęcia do swojej grupy."
   },
   "specialOffer": {
-    "title": "Oferta specjalna - kalendarz pokazów sezonowych",
-    "text": "W tej sekcji znajdziesz sezonowe pokazy i warsztaty. Sprawdź terminy i wybierz wydarzenie.",
-    "btn": "Zobacz kalendarz wydarzeń"
+    "title": "Oferta specjalna -\nkalendarz pokazów sezonowych",
+    "text": "W tej sekcji znajdziesz sezonowe pokazy i warsztaty przygotowane na różne okazje w ciągu roku (np. ferie, wakacje, Halloween czy okres świąteczny). Każda propozycja ma jasno opisany temat, format oraz dokładnie wskazaną grupę wiekową, dzięki czemu łatwo dopasujesz wydarzenie do poziomu uczestników. Sprawdź dostępne terminy i wybierz najlepszą opcję dla swojej grupy.",
+    "btn": "Zobacz kalendarz wydarzeń",
+    "imageAlt": "Kalendarz wydarzeń"
   },
   "reviews": {
     "title": "Opinie klientów",
-    "subtitle": "Zobacz, co mówią rodzice i nauczyciele o naszych zajęciach."
+    "subtitle": "Zobacz, co mówią placówki i rodzice o naszych pokazach, warsztatach oraz kursach IT. Każde zajęcia dopasowujemy do wieku uczestników i poziomu grupy.",
+    "prev": "Poprzednie",
+    "next": "Następne",
+    "r1": {
+      "name": "Marek Nowak",
+      "text": "Świetny pokaz fizyczny — dzieci były zachwycone! Dynamika i bardzo angażujące doświadczenia."
+    },
+    "r2": {
+      "name": "Anna Kowalska",
+      "text": "Zamówiliśmy warsztaty i termin udało się ustalić bardzo szybko. Prowadzący miło i merytorycznie."
+    },
+    "r3": {
+      "name": "Katarzyna Wiśniewska",
+      "text": "Kurs IT prowadzony profesjonalnie. Dziecko zrobiło duży progres i jest zmotywowane."
+    }
   },
   "footer": {
     "desc": "Otrzymuj informacje o nowych pokazach, warsztatach, kursach IT oraz wydarzeniach sezonowych.",
@@ -38,6 +54,18 @@
     "note": "Zapisując się, akceptujesz naszą Politykę prywatności i wyrażasz zgodę na otrzymywanie wiadomości.",
     "quickLinks": "Szybkie linki",
     "findUs": "Znajdź nas",
-    "rights": "Wszelkie prawa zastrzeżone."
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "links": {
+      "about": "O nas",
+      "faq": "FAQ",
+      "contact": "Kontakt",
+      "projects": "Zrealizowane projekty"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    }
   }
 }
