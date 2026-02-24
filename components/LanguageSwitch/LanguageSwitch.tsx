@@ -3,23 +3,37 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
+
 import css from "./LanguageSwitch.module.css";
 
-function parseLocale(path: string) {
-  const match = path.match(/^\/(pl|uk)(?=\/|$)/);
-  const locale = (match?.[1] ?? "pl") as "pl" | "uk";
-  const cleanPath = path.replace(/^\/(pl|uk)(?=\/|$)/, "") || "/";
-  return { locale, cleanPath };
+function getLocaleFromPath(path: string) {
+  const match = path.match(
+    new RegExp(`^/(${routing.locales.join("|")})(?=/|$)`),
+  );
+  return (match?.[1] ??
+    routing.defaultLocale) as (typeof routing.locales)[number];
+}
+
+function stripLocalePrefix(path: string) {
+  let clean = path || "/";
+  const pattern = new RegExp(`^/(${routing.locales.join("|")})(?=/|$)`);
+
+  // прибираємо навіть дубль: /pl/pl -> /
+  while (pattern.test(clean)) {
+    clean = clean.replace(pattern, "") || "/";
+  }
+
+  return clean;
 }
 
 export default function LanguageSwitch() {
   const pathname = usePathname() || "/";
-  const { locale, cleanPath } = useMemo(
-    () => parseLocale(pathname),
-    [pathname],
-  );
 
-  const label = locale === "pl" ? "PL" : "UA";
+  const currentLocale = useMemo(() => getLocaleFromPath(pathname), [pathname]);
+  const cleanPath = useMemo(() => stripLocalePrefix(pathname), [pathname]);
+
+  const label = currentLocale === "pl" ? "PL" : "UA";
 
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
@@ -41,6 +55,12 @@ export default function LanguageSwitch() {
     };
   }, []);
 
+  const onPick = (target: "pl" | "uk") => (e: React.MouseEvent) => {
+    // якщо клік по поточній мові — не навігувати, просто закрити меню
+    if (target === currentLocale) e.preventDefault();
+    setOpen(false);
+  };
+
   return (
     <div className={css.root} ref={ref}>
       <button
@@ -58,8 +78,8 @@ export default function LanguageSwitch() {
           <Link
             href={cleanPath}
             locale="pl"
-            className={`${css.item} ${locale === "pl" ? css.active : ""}`}
-            onClick={() => setOpen(false)}
+            className={`${css.item} ${currentLocale === "pl" ? css.active : ""}`}
+            onClick={onPick("pl")}
             role="menuitem"
           >
             PL
@@ -68,8 +88,8 @@ export default function LanguageSwitch() {
           <Link
             href={cleanPath}
             locale="uk"
-            className={`${css.item} ${locale === "uk" ? css.active : ""}`}
-            onClick={() => setOpen(false)}
+            className={`${css.item} ${currentLocale === "uk" ? css.active : ""}`}
+            onClick={onPick("uk")}
             role="menuitem"
           >
             UA

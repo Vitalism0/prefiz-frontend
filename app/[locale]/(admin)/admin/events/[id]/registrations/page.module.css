@@ -1,0 +1,52 @@
+.main {
+  padding: 24px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.eventBox {
+  margin-bottom: 16px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.empty {
+  margin-top: 8px;
+}
+
+.error {
+  color: crimson;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.th {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+
+.tr:hover {
+  background: #f8fafc;
+}

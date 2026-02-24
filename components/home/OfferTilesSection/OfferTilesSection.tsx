@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 const tiles = [
   { icon: FlaskConical, href: "/oferta/warsztaty", key: "tile1" },
   { icon: Code2, href: "/oferta/kursy-it", key: "tile2" },
-  { icon: CalendarDays, href: "/oferta/pokazy", key: "tile3" },
+  { icon: CalendarDays, href: "/kalendarz", key: "tile3" },
   { icon: User, href: "/oferta/indywidualne", key: "tile4" },
 ] as const;
 

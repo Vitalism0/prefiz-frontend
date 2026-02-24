@@ -1,0 +1,86 @@
+.eventRow {
+  display: grid;
+  grid-template-columns: 1fr 160px; /* card + buttons */
+  gap: 16px;
+  align-items: center;
+}
+
+.eventLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.buttonsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.btn {
+  height: 40px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+  padding: 0 14px;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  background: #fff;
+}
+
+.primary {
+  border-color: rgba(13, 153, 255, 0.45);
+  background: rgba(13, 153, 255, 0.12);
+}
+
+.primary:hover {
+  background: rgba(13, 153, 255, 0.18);
+}
+
+.danger {
+  border-color: rgba(220, 38, 38, 0.35);
+  background: rgba(220, 38, 38, 0.12);
+  font-weight: 800;
+}
+
+.danger:hover {
+  background: rgba(220, 38, 38, 0.18);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 720px) {
+  .eventRow {
+    grid-template-columns: 1fr 140px;
+  }
+}
+
+@media (max-width: 520px) {
+  .eventRow {
+    grid-template-columns: 1fr;
+  }
+
+  .buttonsCol {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+.secondary {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #0f172a;
+}
+
+.secondary:hover {
+  background: #f8fafc;
+}

@@ -6,13 +6,23 @@
     "projects": "Projekty",
     "reviews": "Opinie",
     "faq": "FAQ",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "signIn": "Zaloguj",
+    "signUp": "Zarejestruj",
+    "logout": "Wyloguj",
+    "profile": "Profil"
   },
   "hero": {
     "title": "Nauka i technologia w fascynującej formie",
     "text": "Organizujemy pokazy fizyczne, warsztaty oraz kursy IT dla przedszkoli, szkół i młodzieży. Nauka wciągająco i praktycznie.",
     "btnOffer": "Zobacz ofertę",
     "btnBook": "Zapytaj o termin"
+  },
+  "calendar": {
+    "type_all": "Wszystkie",
+    "type_warsztat": "Warsztaty",
+    "type_pokaz": "Pokazy",
+    "type_kurs_it": "Kursy IT"
   },
   "offerTiles": {
     "title": "Nasza oferta - Aktualności",
@@ -66,6 +76,54 @@
       "instagram": "Instagram",
       "linkedin": "LinkedIn",
       "youtube": "YouTube"
+    }
+  },
+  "profile": {
+    "title": "Profil",
+    "guestBadge": "GOŚĆ",
+    "notLogged": {
+      "subtext": "Nie jesteś zalogowany. Zaloguj się, aby uzyskać dostęp do profilu."
+    },
+    "welcomeSubtext": "Witaj! Zarządzaj kontem i szybko przechodź do najważniejszych sekcji PreFiz.",
+    "role": {
+      "ADMIN": "Administrator",
+      "USER": "Użytkownik"
+    },
+    "access": {
+      "title": "Dostęp",
+      "unauthorizedTitle": "Brak dostępu"
+    },
+    "actions": {
+      "signIn": "Zaloguj się",
+      "signUp": "Zarejestruj się",
+      "calendar": "Kalendarz",
+      "events": "Wydarzenia",
+      "logout": "Wyloguj"
+    },
+    "account": {
+      "title": "Konto",
+      "email": "Email",
+      "role": "Rola"
+    },
+    "quickLinks": {
+      "title": "Szybkie linki"
+    },
+    "quickActions": {
+      "title": "Szybkie akcje",
+      "viewCalendar": "Zobacz kalendarz",
+      "projects": "Projekty"
+    },
+    "tip": {
+      "title": "Tip",
+      "notLogged": "Po zalogowaniu możesz zapisywać się na wydarzenia w kalendarzu.",
+      "logged": "Możesz zapisywać się na wydarzenia. Admin widzi listę zgłoszeń."
+    },
+    "admin": {
+      "title": "Narzędzia admina",
+      "desc": "Zarządzaj wydarzeniami i sprawdzaj, kto się zapisał.",
+      "createEvent": "+ Dodaj wydarzenie",
+      "viewRegistrations": "Zobacz rejestracje",
+      "events": "Admin: Wydarzenia"
     }
   }
 }

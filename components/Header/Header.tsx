@@ -1,11 +1,24 @@
-import { Link } from "@/i18n/navigation";
+"use client";
+
+import { Link, useRouter } from "@/i18n/navigation";
 import { Lightbulb } from "lucide-react";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
 import { useTranslations } from "next-intl";
 import css from "./Header.module.css";
+import { useMe } from "@/lib/auth/useMe";
+import { authApi } from "@/lib/auth/api";
 
 export default function Header() {
   const t = useTranslations("header");
+  const router = useRouter();
+  const { user, loading, refresh } = useMe();
+
+  async function onLogout() {
+    await authApi.logout();
+    await refresh();
+    router.push("/");
+  }
+
   return (
     <header className={css.header}>
       <div className={`${css.inner} container`}>
@@ -47,6 +60,28 @@ export default function Header() {
         </nav>
 
         <div className={css.right}>
+          {!loading && !user && (
+            <div className={css.auth}>
+              <Link href="/sign-in" className={css.authBtn}>
+                {t("signIn")}
+              </Link>
+              <Link href="/sign-up" className={css.authBtn}>
+                {t("signUp")}
+              </Link>
+            </div>
+          )}
+
+          {!loading && user && (
+            <div className={css.auth}>
+              <Link href="/profile" className={css.authLink}>
+                {t("profile")}
+              </Link>
+              <button type="button" className={css.authBtn} onClick={onLogout}>
+                {t("logout")}
+              </button>
+            </div>
+          )}
+
           <LanguageSwitch />
         </div>
       </div>
