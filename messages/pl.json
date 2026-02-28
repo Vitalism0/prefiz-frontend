@@ -78,6 +78,43 @@
       "youtube": "YouTube"
     }
   },
+  "comingSoon": {
+    "label": "W BUDOWIE",
+    "title": "Ta strona jest w przygotowaniu",
+    "desc": "Pracujemy nad tym. Wróć wkrótce — już niedługo znajdziesz tu pełną treść.",
+    "back": "Wróć na stronę główną"
+  },
+  "adminEvent": {
+    "pageTitle": "Dodaj wydarzenie",
+    "fields": {
+      "title": "Tytuł",
+      "description": "Opis",
+      "type": "Typ",
+      "place": "Miejsce",
+      "ageGroup": "Wiek (ageGroup)",
+      "startAt": "Data i godzina",
+      "image": "Prześlij zdjęcie"
+    },
+    "types": {
+      "warsztat": "Warsztat",
+      "pokaz": "Pokaz",
+      "kurs_it": "Kurs IT"
+    },
+    "errors": {
+      "titleMin": "Minimum 3 znaki",
+      "titleMax": "Maksimum 120 znaków",
+      "descMin": "Minimum 10 znaków",
+      "descMax": "Maksimum 2000 znaków",
+      "placeMin": "Minimum 2 znaki",
+      "placeMax": "Maksimum 100 znaków",
+      "ageGroupRequired": "Wymagane",
+      "ageGroupMax": "Maksimum 50 znaków",
+      "startAtRequired": "Wymagane",
+      "startAtFuture": "Data musi być w przyszłości"
+    },
+    "submit": "Dodaj",
+    "submitting": "Dodawanie..."
+  },
   "profile": {
     "title": "Profil",
     "guestBadge": "GOŚĆ",

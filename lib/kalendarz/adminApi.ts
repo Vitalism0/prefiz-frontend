@@ -1,7 +1,6 @@
+import { http } from "../http";
 import type { CalendarEvent } from "./types";
 import type { AdminRegistrationRow } from "./types";
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:5000";
 
 export type MeResponse = {
   id: string;
@@ -19,85 +18,47 @@ export type AdminEventRegistration = {
 };
 
 export async function fetchMe(): Promise<MeResponse | null> {
-  const res = await fetch(`${API_URL}/auth/me`, {
-    method: "GET",
-    credentials: "include", // ✅ cookie token
-    cache: "no-store",
-  });
-
-  if (res.status === 401) return null; // not logged in
-  if (!res.ok) {
-    const text = await res.text().catch(() => "");
-    throw new Error(`GET /auth/me failed (${res.status}): ${text}`);
+  try {
+    return await http<MeResponse>("/auth/me", { cache: "no-store" });
+  } catch (e) {
+    if (e instanceof Error && e.message.startsWith("401")) return null;
+    throw e;
   }
-
-  return res.json();
 }
 
 export async function deleteAdminEvent(id: string): Promise<{ ok: true }> {
-  const res = await fetch(`${API_URL}/admin/events/${encodeURIComponent(id)}`, {
-    method: "DELETE",
-    credentials: "include", // ✅ cookie token
-  });
-
-  if (!res.ok) {
-    const text = await res.text().catch(() => "");
-    throw new Error(`DELETE /admin/events/:id failed (${res.status}): ${text}`);
-  }
-
-  return res.json();
+  return http<{ ok: true }>(
+    `/admin/events/${encodeURIComponent(id)}`,
+    { method: "DELETE" },
+  );
 }
 
-// (optional) якщо колись захочеш адмін-список
 export async function fetchAdminEvents(): Promise<CalendarEvent[]> {
-  const res = await fetch(`${API_URL}/admin/events`, {
-    method: "GET",
-    credentials: "include",
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    const text = await res.text().catch(() => "");
-    throw new Error(`GET /admin/events failed (${res.status}): ${text}`);
-  }
-
-  return res.json();
+  return http<CalendarEvent[]>("/admin/events", { cache: "no-store" });
 }
 
 export async function fetchAllAdminRegistrations(): Promise<
   AdminRegistrationRow[]
 > {
-  const res = await fetch(`${API_URL}/admin/registrations`, {
-    method: "GET",
-    credentials: "include",
+  return http<AdminRegistrationRow[]>("/admin/registrations", {
     cache: "no-store",
   });
-
-  if (!res.ok) {
-    const text = await res.text().catch(() => "");
-    throw new Error(`GET /admin/registrations failed (${res.status}): ${text}`);
-  }
-
-  return res.json();
 }
+
 export async function fetchRegistrationsForEvent(
   eventId: string,
 ): Promise<AdminEventRegistration[]> {
-  const res = await fetch(
-    `${API_URL}/admin/events/${encodeURIComponent(eventId)}/registrations`,
-    {
-      method: "GET",
-      credentials: "include",
-      cache: "no-store",
-    },
+  return http<AdminEventRegistration[]>(
+    `/admin/events/${encodeURIComponent(eventId)}/registrations`,
+    { cache: "no-store" },
   );
+}
 
-  if (!res.ok) {
-    const text = await res.text().catch(() => "");
-    throw new Error(
-      `GET /admin/events/:id/registrations failed (${res.status}): ${text}`,
-    );
-  }
-
-  return res.json();
+export async function createAdminEvent(
+  fd: FormData,
+): Promise<CalendarEvent> {
+  return http<CalendarEvent>("/admin/events", {
+    method: "POST",
+    body: fd,
+  });
 }

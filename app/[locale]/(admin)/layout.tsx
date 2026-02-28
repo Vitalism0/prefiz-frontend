@@ -1,21 +1,23 @@
-"use client";
-
 import type { ReactNode } from "react";
-import { useEffect } from "react";
-import { useRouter } from "@/i18n/navigation";
-import { fetchMe } from "@/lib/kalendarz/adminApi";
+import { redirect } from "@/i18n/navigation";
+import { getServerMe } from "@/lib/auth/server";
+import { routing } from "@/i18n/routing";
 
-export default function AdminLayout({ children }: { children: ReactNode }) {
-  const router = useRouter();
+type Locale = (typeof routing.locales)[number];
 
-  useEffect(() => {
-    (async () => {
-      const me = await fetchMe();
-      if (!me || me.role !== "ADMIN") {
-        router.push("/");
-      }
-    })();
-  }, [router]);
+export default async function AdminLayout({
+  children,
+  params,
+}: {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const me = await getServerMe();
+
+  if (!me || me.role !== "ADMIN") {
+    redirect({ href: "/sign-in", locale: locale as Locale });
+  }
 
   return <>{children}</>;
 }

@@ -4,18 +4,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 
 import type { ApiEvent } from "@/lib/prefizApi";
+import { fetchEventById } from "@/lib/kalendarz/api";
 import { fetchRegistrationsForEvent } from "@/lib/kalendarz/adminApi";
 import type { AdminEventRegistration } from "@/lib/kalendarz/adminApi";
+import { getErrorMessage } from "@/lib/auth/getErrorMessage";
 
 import css from "./page.module.css";
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:5000";
-
-function getErrorMessage(err: unknown, fallback: string) {
-  if (err instanceof Error) return err.message;
-  if (typeof err === "string") return err;
-  return fallback;
-}
 
 export default function AdminEventRegistrationsPage() {
   const params = useParams<{ id: string }>();
@@ -34,22 +28,13 @@ export default function AdminEventRegistrationsPage() {
         setLoading(true);
         setError("");
 
-        const evRes = await fetch(
-          `${API_URL}/events/${encodeURIComponent(eventId)}`,
-          {
-            method: "GET",
-            credentials: "include",
-            cache: "no-store",
-          },
-        );
-
-        if (!evRes.ok) throw new Error("Nie udało się pobrać wydarzenia");
-        const evData = (await evRes.json()) as ApiEvent;
-
-        const regs = await fetchRegistrationsForEvent(eventId);
+        const [evData, regs] = await Promise.all([
+          fetchEventById(eventId),
+          fetchRegistrationsForEvent(eventId),
+        ]);
 
         if (!active) return;
-        setEvent(evData);
+        setEvent(evData as unknown as ApiEvent);
         setItems(regs);
       } catch (e: unknown) {
         if (active) setError(getErrorMessage(e, "Błąd"));

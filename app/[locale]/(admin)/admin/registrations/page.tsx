@@ -5,13 +5,8 @@ import { Link } from "@/i18n/navigation";
 import { fetchAllAdminRegistrations } from "@/lib/kalendarz/adminApi";
 import type { AdminRegistrationRow } from "@/lib/kalendarz/types";
 
+import { getErrorMessage } from "@/lib/auth/getErrorMessage";
 import css from "./page.module.css";
-
-function getErrorMessage(err: unknown, fallback: string) {
-  if (err instanceof Error) return err.message;
-  if (typeof err === "string") return err;
-  return fallback;
-}
 
 export default function AdminRegistrationsPage() {
   const [items, setItems] = useState<AdminRegistrationRow[]>([]);

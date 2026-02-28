@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"c:/Users/48576/Desktop/PreFiz/prefiz-frontend/app/[locale]/\\(admin\\)/admin/events/new\" -type f)",
+      "Bash(ls \"c:/Users/48576/Desktop/PreFiz/prefiz-frontend/app/[locale]/\\(admin\\)/admin/events/new/\")"
+    ]
+  }
+}
