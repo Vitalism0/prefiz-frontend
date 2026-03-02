@@ -2,8 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-
-  background: #cfe1f7; /* як у макеті */
+  background: #cfe1f7;
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
@@ -48,9 +47,7 @@
   color: #0f172a;
   padding: 6px 6px;
   border-radius: 8px;
-  transition:
-    background 120ms ease,
-    opacity 120ms ease;
+  transition: background 120ms ease, opacity 120ms ease;
 }
 
 .navLink:hover {
@@ -67,30 +64,15 @@
 .right {
   display: flex;
   align-items: center;
+  gap: 8px;
   margin-left: 10px;
 }
 
-/* Responsive: сховати частину меню */
-@media (max-width: 920px) {
-  .nav {
-    gap: 10px;
-  }
-  .navLink {
-    font-size: 12px;
-    padding: 6px 4px;
-  }
-}
-
-@media (max-width: 720px) {
-  .nav {
-    display: none;
-  }
-}
 .auth {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-right: 10px;
+  margin-right: 4px;
 }
 
 .authLink {
@@ -117,8 +99,122 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background 120ms ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 .authBtn:hover {
   background: rgba(255, 255, 255, 0.9);
+}
+
+/* Burger button — only visible on mobile */
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: rgba(255, 255, 255, 0.55);
+  color: #0f172a;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 120ms ease;
+}
+
+.burger:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* Mobile dropdown menu */
+.mobileMenu {
+  background: #cfe1f7;
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+  padding: 14px 16px 18px;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.mobileNavLink {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0f172a;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: background 120ms ease;
+  text-decoration: none;
+  display: block;
+}
+
+.mobileNavLink:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.mobileAuth {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.mobileAuthBtn {
+  flex: 1;
+  min-width: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 120ms ease;
+}
+
+.mobileAuthBtn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .nav {
+    gap: 10px;
+  }
+  .navLink {
+    font-size: 13px;
+    padding: 6px 4px;
+  }
+  .authBtn,
+  .authLink {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav {
+    display: none;
+  }
+  .auth {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .right {
+    margin-left: auto;
+  }
 }

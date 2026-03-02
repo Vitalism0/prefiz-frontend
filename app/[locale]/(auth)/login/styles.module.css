@@ -64,3 +64,13 @@
   font-size: 12px;
   color: #666;
 }
+
+@media (max-width: 480px) {
+  .page {
+    padding: 16px 12px;
+  }
+
+  .card {
+    border-radius: 12px;
+  }
+}

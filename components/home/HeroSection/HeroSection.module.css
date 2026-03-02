@@ -76,3 +76,26 @@
     font-size: 34px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero {
+    height: auto;
+    min-height: 340px;
+    padding: 32px 0;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .text {
+    font-size: 15px;
+    margin: 0 0 28px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

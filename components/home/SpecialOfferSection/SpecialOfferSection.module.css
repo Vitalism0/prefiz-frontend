@@ -48,3 +48,20 @@
     justify-content: flex-start;
   }
 }
+
+@media (max-width: 520px) {
+  .title {
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+
+  .text {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 16px;
+  }
+}

@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, Menu, X } from "lucide-react";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
 import { useTranslations } from "next-intl";
 import css from "./Header.module.css";
@@ -12,12 +13,24 @@ export default function Header() {
   const t = useTranslations("header");
   const router = useRouter();
   const { user, loading, refresh } = useMe();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   async function onLogout() {
     await authApi.logout();
     await refresh();
     router.push("/");
+    setMenuOpen(false);
   }
+
+  const navLinks = [
+    { href: "/aktualnosci", label: t("news") },
+    { href: "/oferta", label: t("offer") },
+    { href: "/o-nas", label: t("about") },
+    { href: "/projekty", label: t("projects") },
+    { href: "/opinie", label: t("reviews") },
+    { href: "/faq", label: t("faq") },
+    { href: "/kontakt", label: t("contact") },
+  ];
 
   return (
     <header className={css.header}>
@@ -30,33 +43,11 @@ export default function Header() {
         </Link>
 
         <nav className={css.nav} aria-label="Main navigation">
-          <Link href="/aktualnosci" className={css.navLink}>
-            {t("news")}
-          </Link>
-
-          <Link href="/oferta" className={css.navLink}>
-            {t("offer")} <span className={css.chevron}>▾</span>
-          </Link>
-
-          <Link href="/o-nas" className={css.navLink}>
-            {t("about")}
-          </Link>
-
-          <Link href="/projekty" className={css.navLink}>
-            {t("projects")}
-          </Link>
-
-          <Link href="/opinie" className={css.navLink}>
-            {t("reviews")}
-          </Link>
-
-          <Link href="/faq" className={css.navLink}>
-            {t("faq")}
-          </Link>
-
-          <Link href="/kontakt" className={css.navLink}>
-            {t("contact")}
-          </Link>
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href} className={css.navLink}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         <div className={css.right}>
@@ -83,8 +74,75 @@ export default function Header() {
           )}
 
           <LanguageSwitch />
+
+          <button
+            type="button"
+            className={css.burger}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
         </div>
       </div>
+
+      {menuOpen && (
+        <div className={css.mobileMenu} aria-label="Mobile navigation">
+          <nav className={css.mobileNav}>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={css.mobileNavLink}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {!loading && (
+            <div className={css.mobileAuth}>
+              {!user ? (
+                <>
+                  <Link
+                    href="/sign-in"
+                    className={css.mobileAuthBtn}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {t("signIn")}
+                  </Link>
+                  <Link
+                    href="/sign-up"
+                    className={css.mobileAuthBtn}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {t("signUp")}
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link
+                    href="/profile"
+                    className={css.mobileAuthBtn}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {t("profile")}
+                  </Link>
+                  <button
+                    type="button"
+                    className={css.mobileAuthBtn}
+                    onClick={onLogout}
+                  >
+                    {t("logout")}
+                  </button>
+                </>
+              )}
+            </div>
+          )}
+        </div>
+      )}
     </header>
   );
 }
