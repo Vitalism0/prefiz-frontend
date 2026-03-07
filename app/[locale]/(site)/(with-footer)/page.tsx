@@ -1,6 +1,7 @@
 import HeroSection from "@/components/home/HeroSection/HeroSection";
 import OfferTilesSection from "@/components/home/OfferTilesSection/OfferTilesSection";
 import SpecialOfferSection from "@/components/home/SpecialOfferSection/SpecialOfferSection";
+import FaqSection from "@/components/home/FaqSection/FaqSection";
 import ReviewsSection from "@/components/home/ReviewsSection/ReviewsSection";
 
 export default function HomePage() {
@@ -9,6 +10,7 @@ export default function HomePage() {
       <HeroSection />
       <OfferTilesSection />
       <SpecialOfferSection />
+      <FaqSection />
       <ReviewsSection />
     </main>
   );

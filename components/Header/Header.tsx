@@ -27,10 +27,25 @@ export default function Header() {
     { href: "/oferta", label: t("offer") },
     { href: "/o-nas", label: t("about") },
     { href: "/projekty", label: t("projects") },
-    { href: "/opinie", label: t("reviews") },
-    { href: "/faq", label: t("faq") },
     { href: "/kontakt", label: t("contact") },
   ];
+
+  function handleSectionClick(id: string) {
+    return (e: React.MouseEvent) => {
+      e.preventDefault();
+      setMenuOpen(false);
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        sessionStorage.setItem("scrollTo", id);
+        router.push("/");
+      }
+    };
+  }
+
+  const handleFaqClick = handleSectionClick("faq");
+  const handleReviewsClick = handleSectionClick("reviews");
 
   return (
     <header className={css.header}>
@@ -48,6 +63,12 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <Link href="/" className={css.navLink} onClick={handleReviewsClick}>
+            {t("reviews")}
+          </Link>
+          <Link href="/" className={css.navLink} onClick={handleFaqClick}>
+            {t("faq")}
+          </Link>
         </nav>
 
         <div className={css.right}>
@@ -100,6 +121,12 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            <Link href="/" className={css.mobileNavLink} onClick={handleReviewsClick}>
+              {t("reviews")}
+            </Link>
+            <Link href="/" className={css.mobileNavLink} onClick={handleFaqClick}>
+              {t("faq")}
+            </Link>
           </nav>
 
           {!loading && (

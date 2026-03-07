@@ -25,8 +25,8 @@
     "type_kurs_it": "Kursy IT"
   },
   "offerTiles": {
-    "title": "Nasza oferta - Aktualności",
-    "subtitle": "Sprawdź najnowsze informacje o pokazach, warsztatach i kursach IT.Publikujemy zapowiedzi wydarzeń, terminy zapisów oraz krótkie relacje z realizacji.",
+    "title": "Nasza oferta",
+    "subtitle": "Pokazy fizyczne, warsztaty naukowe i kursy IT dopasowane do wieku i poziomu grupy — od przedszkola po liceum.",
     "tile1": "Warsztaty naukowe",
     "tile2": "Kursy IT",
     "tile3": "Pokazy fizyczne",
@@ -39,11 +39,42 @@
     "btn": "Zobacz kalendarz wydarzeń",
     "imageAlt": "Kalendarz wydarzeń"
   },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "subtitle": "Znajdziesz tutaj odpowiedzi na najczęstsze pytania dotyczące naszej oferty.",
+    "items": [
+      {
+        "q": "Dla kogo są wasze zajęcia?",
+        "a": "Nasze pokazy, warsztaty i kursy IT są skierowane do przedszkoli, szkół podstawowych oraz młodzieży w wieku 5–18 lat. Każde zajęcia dopasowujemy do wieku i poziomu grupy — od najprostszych doświadczeń dla maluchów, po zaawansowane projekty programistyczne dla licealistów."
+      },
+      {
+        "q": "Ile trwa typowy pokaz lub warsztat?",
+        "a": "Standardowy czas trwania to 45–60 minut, co odpowiada jednej lekcji szkolnej. Na życzenie możemy zaproponować zajęcia dwugodzinne lub bloki tematyczne łączone z przerwą."
+      },
+      {
+        "q": "Czy dojeżdżacie do szkół i przedszkoli?",
+        "a": "Tak — działamy w trybie wyjazdowym. Przyjeżdżamy do Twojej placówki z całym sprzętem i materiałami. Obsługujemy miasta i miejscowości w promieniu do 150 km. W przypadku większych odległości prosimy o wcześniejszy kontakt."
+      },
+      {
+        "q": "Jak zamówić pokaz lub warsztat?",
+        "a": "Wystarczy wypełnić formularz kontaktowy lub napisać do nas e-mailem. Podaj preferowany termin, liczbę uczestników i wybrany rodzaj zajęć, a odezwiemy się w ciągu 24 godzin z potwierdzeniem dostępności i wyceną."
+      },
+      {
+        "q": "Ile kosztuje organizacja zajęć?",
+        "a": "Ceny zależą od rodzaju zajęć, liczby uczestników i lokalizacji. Pokazy fizyczne zaczynają się od 350 zł, warsztaty naukowe od 400 zł, a kursy IT są wyceniane indywidualnie. Skontaktuj się z nami — chętnie przygotujemy ofertę dopasowaną do Twojej placówki."
+      },
+      {
+        "q": "Jakie środki bezpieczeństwa stosujecie podczas pokazów?",
+        "a": "Bezpieczeństwo uczestników jest dla nas priorytetem. Wszystkie doświadczenia przeprowadzamy zgodnie z protokołami BHP. Prowadzący posiadają odpowiednie przeszkolenie, a sprzęt jest regularnie sprawdzany. Pokazy są dostosowane do wieku — eksperymenty dla najmłodszych nie zawierają żadnych substancji niebezpiecznych."
+      }
+    ]
+  },
   "reviews": {
     "title": "Opinie klientów",
     "subtitle": "Zobacz, co mówią placówki i rodzice o naszych pokazach, warsztatach oraz kursach IT. Każde zajęcia dopasowujemy do wieku uczestników i poziomu grupy.",
     "prev": "Poprzednie",
     "next": "Następne",
+    "review": "Opinia",
     "r1": {
       "name": "Marek Nowak",
       "text": "Świetny pokaz fizyczny — dzieci były zachwycone! Dynamika i bardzo angażujące doświadczenia."
@@ -55,6 +86,18 @@
     "r3": {
       "name": "Katarzyna Wiśniewska",
       "text": "Kurs IT prowadzony profesjonalnie. Dziecko zrobiło duży progres i jest zmotywowane."
+    },
+    "r4": {
+      "name": "Tomasz Wierzbicki",
+      "text": "Bardzo profesjonalna obsługa. Dzieci były zaangażowane przez cały czas trwania warsztatu. Jedyna uwaga to trudność ze znalezieniem pierwszego wolnego terminu."
+    },
+    "r5": {
+      "name": "Magdalena Olejnik",
+      "text": "Kurs IT na najwyższym poziomie! Córka po pierwszych zajęciach już chciała się uczyć dalej. Polecam każdej szkole."
+    },
+    "r6": {
+      "name": "Piotr Jabłoński",
+      "text": "Pokaz fizyczny zrobił ogromne wrażenie na uczniach. Prowadzący świetnie komunikował się z dziećmi. Zdecydowanie wrócimy."
     }
   },
   "footer": {

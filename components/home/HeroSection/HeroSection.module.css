@@ -49,20 +49,10 @@
 
 .btn {
   height: 50px;
-  padding: 13 45px;
+  padding: 13px 45px;
   border-radius: 8px;
   font-size: 20px;
   font-weight: 500;
-}
-
-:global(.btnSecondary) {
-  background: rgba(26, 115, 232, 0.25);
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.18);
-}
-
-:global(.btnSecondary:hover) {
-  background: rgba(26, 115, 232, 0.32);
 }
 
 /* адаптив */

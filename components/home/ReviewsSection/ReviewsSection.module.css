@@ -1,3 +1,7 @@
+.section {
+  scroll-margin-top: 60px;
+}
+
 .title {
   font-size: 48px;
   margin-bottom: 24px;
@@ -5,66 +9,128 @@
 }
 
 .subtitle {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   max-width: 760px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* ── Carousel track ── */
+.track {
+  display: flex;
   gap: 16px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 }
 
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Card ── */
 .card {
+  flex: 0 0 calc((100% - 32px) / 3);
+  scroll-snap-align: start;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 16px;
+  padding: 20px;
 }
 
+/* ── Stars ── */
 .stars {
-  letter-spacing: 2px;
+  display: flex;
+  gap: 2px;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
+.starOn {
+  color: #f59e0b;
+}
+
+.starOff {
+  color: #d1d5db;
+}
+
+/* ── Text & name ── */
 .text {
   color: var(--muted);
-  min-height: 78px;
+  line-height: 1.6;
 }
 
 .name {
-  margin-top: 10px;
+  margin-top: 12px;
   font-weight: 700;
   color: var(--text);
 }
 
+/* ── Controls ── */
 .controls {
-  margin-top: 14px;
   display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
 }
 
 .arrow {
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   border: 1px solid var(--border);
   background: var(--surface);
+  cursor: pointer;
+  color: var(--text);
+  transition: border-color 150ms, color 150ms;
+  flex-shrink: 0;
 }
 
+.arrow:hover:not(:disabled) {
+  border-color: #1a73e8;
+  color: #1a73e8;
+}
+
+.arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* ── Dots ── */
+.dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 200ms, transform 200ms;
+}
+
+.dotActive {
+  background: #1a73e8;
+  transform: scale(1.35);
+}
+
+/* ── Responsive ── */
 @media (max-width: 980px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .text {
-    min-height: auto;
+  .card {
+    flex: 0 0 calc((100% - 16px) / 2);
   }
 }
 
 @media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .card {
+    flex: 0 0 100%;
   }
 
   .title {
@@ -74,6 +140,6 @@
 
   .subtitle {
     font-size: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 }
