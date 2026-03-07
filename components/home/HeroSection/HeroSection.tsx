@@ -1,6 +1,7 @@
 import css from "./HeroSection.module.css";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { ChevronDown } from "lucide-react";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
@@ -30,6 +31,9 @@ export default function HeroSection() {
             {t("btnBook")}
           </Link>
         </div>
+      </div>
+      <div className={css.scrollArrow} aria-hidden="true">
+        <ChevronDown size={30} />
       </div>
     </section>
   );

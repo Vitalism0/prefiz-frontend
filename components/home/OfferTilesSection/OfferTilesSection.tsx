@@ -27,16 +27,10 @@ export default function OfferTilesSection() {
             return (
               <Link key={tile.href} href={tile.href} className={css.card}>
                 <Icon className={css.icon} />
-                <h3 className={css.cardTitle}>
-                  {title.split("\n").map((line, i) => (
-                    <span key={i}>
-                      {line}
-                      <br />
-                    </span>
-                  ))}
-                </h3>
-
-                <p className={css.cardText}>{tr("cardText")}</p>
+                <div className={css.cardBody}>
+                  <h3 className={css.cardTitle}>{title}</h3>
+                  <p className={css.cardText}>{tr(`${tile.key}Desc`)}</p>
+                </div>
               </Link>
             );
           })}

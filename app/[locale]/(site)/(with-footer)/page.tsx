@@ -3,6 +3,7 @@ import OfferTilesSection from "@/components/home/OfferTilesSection/OfferTilesSec
 import SpecialOfferSection from "@/components/home/SpecialOfferSection/SpecialOfferSection";
 import FaqSection from "@/components/home/FaqSection/FaqSection";
 import ReviewsSection from "@/components/home/ReviewsSection/ReviewsSection";
+import CtaSection from "@/components/home/CtaSection/CtaSection";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <SpecialOfferSection />
       <FaqSection />
       <ReviewsSection />
+      <CtaSection />
     </main>
   );
 }

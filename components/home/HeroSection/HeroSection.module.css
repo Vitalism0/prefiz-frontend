@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 518px;
+  height: 640px;
   display: flex;
   align-items: center;
 
@@ -53,6 +53,22 @@
   border-radius: 8px;
   font-size: 20px;
   font-weight: 500;
+}
+
+/* ── Scroll arrow ── */
+.scrollArrow {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.65);
+  z-index: 1;
+  animation: bounce 2.2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(9px); }
 }
 
 /* адаптив */

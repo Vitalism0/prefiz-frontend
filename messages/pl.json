@@ -28,10 +28,13 @@
     "title": "Nasza oferta",
     "subtitle": "Pokazy fizyczne, warsztaty naukowe i kursy IT dopasowane do wieku i poziomu grupy — od przedszkola po liceum.",
     "tile1": "Warsztaty naukowe",
+    "tile1Desc": "Eksperymenty na żywo, które angażują i inspirują — od chemii po fizykę.",
     "tile2": "Kursy IT",
+    "tile2Desc": "Programowanie, tworzenie stron i aplikacji dla dzieci i młodzieży.",
     "tile3": "Pokazy fizyczne",
+    "tile3Desc": "Widowiskowe doświadczenia fizyczne prowadzone przez naszych specjalistów.",
     "tile4": "Zajęcia indywidualne",
-    "cardText": "Sprawdź szczegóły i dopasuj zajęcia do swojej grupy."
+    "tile4Desc": "Zajęcia dopasowane do jednej osoby lub małej grupy — w Twoim tempie."
   },
   "specialOffer": {
     "title": "Oferta specjalna -\nkalendarz pokazów sezonowych",
@@ -121,6 +124,12 @@
       "youtube": "YouTube"
     }
   },
+  "cta": {
+    "title": "Zamów pokaz dla swojej szkoły",
+    "subtitle": "Podberemo format i datę — odezwiemy się w ciągu 24 godzin.",
+    "btnContact": "Napisz do nas",
+    "btnOffer": "Zobacz ofertę"
+  },
   "comingSoon": {
     "label": "W BUDOWIE",
     "title": "Ta strona jest w przygotowaniu",
@@ -204,6 +213,18 @@
       "createEvent": "+ Dodaj wydarzenie",
       "viewRegistrations": "Zobacz rejestracje",
       "events": "Admin: Wydarzenia"
+    },
+    "myRegistrations": {
+      "title": "Moje zapisy",
+      "empty": "Nie masz jeszcze żadnych zapisów na wydarzenia.",
+      "goToCalendar": "Przeglądaj kalendarz",
+      "registeredAt": "Zapisano",
+      "place": "Miejsce",
+      "type": {
+        "warsztat": "Warsztat",
+        "pokaz": "Pokaz",
+        "kurs_it": "Kurs IT"
+      }
     }
   }
 }

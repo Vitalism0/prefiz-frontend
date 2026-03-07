@@ -4,6 +4,11 @@ import { useEffect, useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { authApi, type User } from "@/lib/auth/api";
+import {
+  registrationsApi,
+  type MyRegistration,
+} from "@/lib/kalendarz/registrationsApi";
+import { format } from "date-fns";
 import css from "./Profile.module.css";
 
 function getErrorMessage(err: unknown, fallback: string) {
@@ -19,10 +24,21 @@ export default function ProfilePage() {
   const [user, setUser] = useState<User | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  const [registrations, setRegistrations] = useState<MyRegistration[] | null>(null);
+  const [regsLoading, setRegsLoading] = useState(false);
+
   useEffect(() => {
     authApi
       .me()
-      .then(setUser)
+      .then((u) => {
+        setUser(u);
+        setRegsLoading(true);
+        registrationsApi
+          .getMyRegistrations()
+          .then(setRegistrations)
+          .catch(() => setRegistrations([]))
+          .finally(() => setRegsLoading(false));
+      })
       .catch((e: unknown) => setError(getErrorMessage(e, "Unauthorized")));
   }, []);
 
@@ -203,6 +219,56 @@ export default function ProfilePage() {
               </div>
             </div>
           )}
+
+          {/* MY REGISTRATIONS */}
+          <div className={css.registrationsCard}>
+            <h2 className={css.cardTitle}>{t("myRegistrations.title")}</h2>
+
+            {regsLoading ? (
+              <div className={css.registrationsList}>
+                <div className={css.skeletonReg} />
+                <div className={css.skeletonReg} />
+                <div className={css.skeletonReg} />
+              </div>
+            ) : registrations && registrations.length > 0 ? (
+              <div className={css.registrationsList}>
+                {registrations.map((reg) => (
+                  <Link
+                    key={reg.id}
+                    className={css.registrationItem}
+                    href={`/wydarzenia/${reg.event.id}`}
+                  >
+                    <div className={css.regInfo}>
+                      <div className={css.regTitle}>{reg.event.title}</div>
+                      <div className={css.regMeta}>
+                        <span className={css.regTypeBadge}>
+                          {t(
+                            `myRegistrations.type.${reg.event.type}` as Parameters<typeof t>[0],
+                          )}
+                        </span>
+                        <span>
+                          {format(new Date(reg.event.startAt), "dd.MM.yyyy HH:mm")}
+                        </span>
+                        <span>
+                          {t("myRegistrations.place")}: {reg.event.place}
+                        </span>
+                      </div>
+                    </div>
+                    <span className={css.regArrow}>›</span>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className={css.emptyState}>
+                <p className={css.emptyStateText}>
+                  {t("myRegistrations.empty")}
+                </p>
+                <Link className={css.primaryBtn} href="/kalendarz">
+                  {t("myRegistrations.goToCalendar")}
+                </Link>
+              </div>
+            )}
+          </div>
         </section>
       </div>
     </main>

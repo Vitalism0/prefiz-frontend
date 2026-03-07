@@ -1,0 +1,88 @@
+.section {
+  background: linear-gradient(135deg, #0d1b2e 0%, #1a3a6b 100%);
+  padding: 88px 0;
+  text-align: center;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18px;
+  max-width: 540px;
+  margin: 0 0 44px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  height: 52px;
+  padding: 0 44px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 44px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  transition: border-color 150ms, background 150ms;
+}
+
+.btnOutline:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .btn,
+  .btnOutline {
+    font-size: 16px;
+    padding: 0 24px;
+  }
+}

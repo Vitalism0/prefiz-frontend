@@ -361,3 +361,94 @@
     background-position: -200% 0;
   }
 }
+
+/* MY REGISTRATIONS */
+.registrationsCard {
+  grid-column: 1 / -1;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.registrationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.registrationItem {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: rgba(248, 250, 252, 0.7);
+  text-decoration: none;
+  color: inherit;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.registrationItem:hover {
+  background: rgba(13, 153, 255, 0.07);
+  border-color: rgba(13, 153, 255, 0.25);
+}
+
+.regInfo { min-width: 0; }
+
+.regTitle {
+  font-size: 14px;
+  font-weight: 900;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.regMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.65);
+}
+
+.regTypeBadge {
+  font-size: 11px;
+  font-weight: 900;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(13, 153, 255, 0.12);
+  border: 1px solid rgba(13, 153, 255, 0.25);
+  color: #0369a1;
+  white-space: nowrap;
+}
+
+.regArrow {
+  font-size: 16px;
+  color: rgba(15, 23, 42, 0.35);
+  flex-shrink: 0;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 24px 12px;
+  color: rgba(15, 23, 42, 0.55);
+  font-size: 14px;
+}
+
+.emptyStateText { margin-bottom: 14px; }
+
+.skeletonReg {
+  height: 64px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: linear-gradient(90deg, #f1f5f9, #ffffff, #f1f5f9);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+}
