@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
-import { Lightbulb, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
 import { useTranslations } from "next-intl";
 import css from "./Header.module.css";
@@ -51,10 +51,11 @@ export default function Header() {
     <header className={css.header}>
       <div className={`${css.inner} container`}>
         <Link href="/" className={css.brand} aria-label="PreFiz - Home">
-          <span>
-            <Lightbulb color="#0D99FF" size={40} />
-          </span>
-          <span className={css.brandText}>PreFiz</span>
+          <img
+            src="/logo-v6-cap-atom.svg"
+            alt="PreFiz"
+            className={css.logo}
+          />
         </Link>
 
         <nav className={css.nav} aria-label="Main navigation">

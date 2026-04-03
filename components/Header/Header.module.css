@@ -16,8 +16,14 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+  display: block;
 }
 
 .logoDot {

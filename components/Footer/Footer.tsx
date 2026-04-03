@@ -5,7 +5,6 @@ import {
   Instagram,
   Linkedin,
   Youtube,
-  Lightbulb,
 } from "lucide-react";
 import NewsletterForm from "./NewsletterForm";
 import { useTranslations } from "next-intl";
@@ -19,10 +18,11 @@ export default function Footer() {
         <div className={css.card}>
           <div className={css.left}>
             <div className={css.brandRow}>
-              <span className={css.logo}>
-                <Lightbulb color="#0D99FF" size={40} />
-              </span>
-              <span className={css.brand}>PreFiz</span>
+              <img
+                src="/logo-v6-cap-atom.svg"
+                alt="PreFiz"
+                className={css.logo}
+              />
             </div>
 
             <p className={css.desc}>{t("desc")}</p>

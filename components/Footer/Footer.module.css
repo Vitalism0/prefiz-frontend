@@ -27,9 +27,9 @@
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
-  color: #1a73e8;
+  height: 44px;
+  width: auto;
+  display: block;
 }
 
 .brand {
