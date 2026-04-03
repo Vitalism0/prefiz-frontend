@@ -1,0 +1,252 @@
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, #0d1b2e 0%, #1a3a6b 100%);
+  padding: 80px 0 72px;
+  text-align: center;
+}
+
+.heroLabel {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 16px;
+}
+
+.heroTitle {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  margin: 0 0 20px;
+}
+
+.heroTitle span {
+  color: #29b6f6;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Section ── */
+.section {
+  padding: 72px 0;
+  background: var(--bg);
+}
+
+.sectionTitle {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+  margin: 0 0 8px;
+}
+
+.sectionSubtitle {
+  font-size: 17px;
+  color: var(--muted);
+  margin: 0 0 52px;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+/* ── Category label above group ── */
+.categoryLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-soft);
+}
+
+.group {
+  margin-bottom: 56px;
+}
+
+.group:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Cards grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.grid2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ── Card ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(2, 6, 23, 0.12);
+}
+
+.cardImage {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.cardBody {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.cardType {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.cardDesc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0;
+  flex: 1;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  margin-top: 8px;
+  transition: gap 120ms ease;
+}
+
+.cardLink:hover {
+  gap: 10px;
+}
+
+/* ── CTA strip ── */
+.ctaStrip {
+  background: linear-gradient(135deg, #0d1b2e 0%, #1a3a6b 100%);
+  padding: 64px 0;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.ctaSubtitle {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 36px;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaBtn {
+  height: 50px;
+  padding: 0 36px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.ctaBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 36px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  transition: border-color 120ms, background 120ms;
+}
+
+.ctaBtnOutline:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 34px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .grid,
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .ctaTitle {
+    font-size: 26px;
+  }
+}

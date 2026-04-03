@@ -130,6 +130,119 @@
     "btnContact": "Napisz do nas",
     "btnOffer": "Zobacz ofertę"
   },
+  "oferta": {
+    "heroLabel": "Co oferujemy",
+    "heroTitlePre": "Kursy i warsztaty,",
+    "heroTitleHighlight": "które inspirują",
+    "heroSubtitle": "Pokazy fizyczne, warsztaty naukowe i kursy IT dopasowane do wieku i poziomu grupy — od przedszkola po liceum.",
+    "sectionTitle": "Nasza oferta",
+    "sectionSubtitle": "Każde zajęcia projektujemy z myślą o uczestnikach — angażująco, bezpiecznie i praktycznie.",
+    "learnMore": "Zapytaj o termin",
+    "cat": {
+      "kursy": "Kursy",
+      "warsztaty": "Warsztaty",
+      "pokazy": "Pokazy",
+      "kurs": "Kurs",
+      "warsztat": "Warsztat",
+      "pokaz": "Pokaz"
+    },
+    "courses": {
+      "excel1": {
+        "title": "Podstawy Excel",
+        "desc": "Kurs przeznaczony dla osób, które chcą sprawnie poruszać się w arkuszu kalkulacyjnym. Uczestnicy uczą się tworzenia tabel, stosowania formuł, formatowania danych i budowania prostych wykresów. Zajęcia są praktyczne — każdy element omawiany jest na konkretnych przykładach."
+      },
+      "excel2": {
+        "title": "Excel dla analizy danych naukowych",
+        "desc": "Zaawansowany kurs łączący Excel z metodologią naukową. Uczestnicy pracują na rzeczywistych zbiorach danych — uczą się analizy statystycznej, regresji liniowej, tworzenia wykresów rozrzutu i interpretacji wyników. Idealny dla uczniów i studentów kierunków przyrodniczych."
+      },
+      "figma": {
+        "title": "Figma dla początkujących",
+        "desc": "Kurs wprowadzający do projektowania interfejsów w Figmie. Uczestnicy poznają narzędzia rysowania, tworzenie komponentów, prototypowanie i współpracę w chmurze. Kurs kończy się zaprojektowaniem własnego ekranu aplikacji mobilnej."
+      },
+      "fizyka": {
+        "title": "Warsztaty z fizyki dla dzieci do lat 8",
+        "desc": "Interaktywne warsztaty stworzone z myślą o najmłodszych odkrywcach. Przez zabawę i proste eksperymenty dzieci poznają podstawy fizyki — magnetyzm, grawitację, światło i dźwięk. Wszystkie doświadczenia są bezpieczne i dostosowane do wieku uczestników."
+      },
+      "elektro": {
+        "title": "Elektryczność i magnetyzm",
+        "desc": "Warsztaty eksplorujące fascynujący świat sił elektromagnetycznych. Uczestnicy budują obwody elektryczne, badają właściwości magnesów i obserwują pole magnetyczne za pomocą opiłków żelaza. Zajęcia łączą teorię z efektownymi doświadczeniami."
+      },
+      "azot": {
+        "title": "Fizyka niskich temperatur — Ciekły azot",
+        "desc": "Widowiskowy pokaz fizyczny, podczas którego uczestnicy odkrywają właściwości materii w ekstremalnie niskich temperaturach. Ciekły azot w akcji: zamrażanie kwiatów, kruszone materiały i niezwykłe zjawiska fizyczne — nauka w najbardziej pamiętnej formie."
+      }
+    },
+    "cta": {
+      "title": "Zainteresowany? Napisz do nas",
+      "subtitle": "Dobierzemy format i termin — odpiszemy w ciągu 24 godzin.",
+      "btnContact": "Skontaktuj się",
+      "btnCalendar": "Zobacz kalendarz"
+    }
+  },
+  "about": {
+    "heroLabel": "Kim jesteśmy",
+    "heroTitlePre": "Nauka, która",
+    "heroTitleHighlight": "rozwija dzieci",
+    "heroSubtitle": "PreFiz to zespół pasjonatów nauki i technologii. Organizujemy pokazy fizyczne, warsztaty i kursy IT dla przedszkoli, szkół i młodzieży w Bydgoszczy i okolicach.",
+    "nav": {
+      "mission": "Misja",
+      "whatWeDo": "Co robimy",
+      "values": "Wartości",
+      "location": "Lokalizacja"
+    },
+    "mission": {
+      "title": "Nasza misja — budzić ciekawość świata",
+      "text1": "Wierzymy, że każde dziecko ma w sobie naturalną ciekawość i chęć odkrywania. Naszą misją jest pielęgnowanie tej ciekawości poprzez angażujące pokazy naukowe, warsztaty i kursy IT, które sprawiają, że nauka staje się przygodą, a nie obowiązkiem.",
+      "text2": "Łączymy fizykę, chemię i technologię w fascynujące doświadczenia dostosowane do wieku i poziomu grupy — od maluchów w przedszkolu po uczniów liceum. Każde zajęcia to krok w stronę świadomego, kreatywnego i myślącego pokolenia."
+    },
+    "whatWeDo": {
+      "title": "Co oferujemy",
+      "subtitle": "Nasza oferta obejmuje cztery główne obszary działalności, każdy dostosowany do potrzeb i możliwości uczestników.",
+      "item1": {
+        "title": "Warsztaty naukowe",
+        "text": "Eksperymenty na żywo z fizyki i chemii — angażujące, bezpieczne i dopasowane do poziomu grupy."
+      },
+      "item2": {
+        "title": "Kursy IT",
+        "text": "Programowanie, tworzenie stron i aplikacji dla dzieci i młodzieży w przyjaznej, praktycznej formie."
+      },
+      "item3": {
+        "title": "Pokazy fizyczne",
+        "text": "Widowiskowe doświadczenia prowadzone przez naszych specjalistów — idealne na szkolne wydarzenie."
+      },
+      "item4": {
+        "title": "Zajęcia indywidualne",
+        "text": "Zajęcia jeden na jeden lub w małej grupie, w tempie dopasowanym do uczestnika."
+      }
+    },
+    "values": {
+      "title": "Nasze wartości",
+      "v1": {
+        "title": "Pasja do nauki",
+        "text": "Każde zajęcia projektujemy z entuzjazmem. Chcemy, żeby dzieci wychodziły z nich z błyskiem w oku i pytaniami, które prowadzą do odkryć."
+      },
+      "v2": {
+        "title": "Troska o uczestnika",
+        "text": "Dostosowujemy format, tempo i treść do wieku oraz możliwości grupy. Żadne dziecko nie zostaje z tyłu."
+      },
+      "v3": {
+        "title": "Bezpieczeństwo i jakość",
+        "text": "Wszystkie doświadczenia przeprowadzamy zgodnie z protokołami BHP. Sprzęt jest regularnie sprawdzany, a prowadzący odpowiednio przeszkoleni."
+      }
+    },
+    "location": {
+      "title": "Gdzie nas znajdziesz",
+      "addressLabel": "Adres",
+      "emailLabel": "E-mail",
+      "phoneLabel": "Telefon"
+    },
+    "cta": {
+      "title": "Zamów zajęcia dla swojej szkoły",
+      "subtitle": "Odezwiemy się w ciągu 24 godzin z terminem i wyceną.",
+      "btnContact": "Napisz do nas",
+      "btnOffer": "Zobacz ofertę"
+    }
+  },
   "comingSoon": {
     "label": "W BUDOWIE",
     "title": "Ta strona jest w przygotowaniu",
