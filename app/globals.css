@@ -47,16 +47,30 @@ a {
   --radius: 14px;
 
   --bg: #f5f9ff;
+  --bg-alt: #f8fbff;
   --surface: #ffffff;
   --text: #0f172a;
   --muted: #667085;
   --border: rgba(15, 23, 42, 0.12);
+  --border-soft: rgba(15, 23, 42, 0.08);
 
   --primary: #1a73e8;
   --primary-hover: #1558b0;
   --primary-soft: rgba(26, 115, 232, 0.12);
+  --primary-soft-strong: rgba(26, 115, 232, 0.18);
 
   --shadow: 0 10px 25px rgba(2, 6, 23, 0.08);
+
+  /* Header / Footer */
+  --header-bg: #cfe1f7;
+  --surface-glass: rgba(255, 255, 255, 0.65);
+  --surface-glass-hover: rgba(255, 255, 255, 0.9);
+  --surface-overlay: rgba(255, 255, 255, 0.45);
+
+  /* Form inputs */
+  --input-bg: #eef3fb;
+  --placeholder: #98a2b3;
+  --select-bg: #f8fafd;
 }
 
 body {

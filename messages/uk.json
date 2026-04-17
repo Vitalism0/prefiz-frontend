@@ -22,7 +22,13 @@
     "type_all": "Усі",
     "type_warsztat": "Воркшопи",
     "type_pokaz": "Покази",
-    "type_kurs_it": "IT курси"
+    "type_kurs_it": "IT курси",
+    "filterType": "Тип події",
+    "filterPlace": "Місце",
+    "filterAge": "Вік",
+    "loading": "Завантаження...",
+    "error": "Помилка",
+    "confirmDelete": "Справді видалити цю подію?"
   },
   "offerTiles": {
     "title": "Наша пропозиція",
@@ -242,6 +248,46 @@
       "btnContact": "Написати нам",
       "btnOffer": "Переглянути пропозиції"
     }
+  },
+  "auth": {
+    "signIn": {
+      "title": "Увійти",
+      "subtitle": "Ласкаво просимо! Введіть свої дані.",
+      "email": "Email",
+      "password": "Пароль",
+      "submit": "Увійти",
+      "loading": "Вхід...",
+      "noAccount": "Ще немає акаунту?",
+      "signUpLink": "Зареєструватись"
+    },
+    "signUp": {
+      "title": "Реєстрація",
+      "subtitle": "Створіть акаунт для управління профілем.",
+      "email": "Email",
+      "password": "Пароль",
+      "submit": "Створити акаунт",
+      "loading": "Створення...",
+      "hasAccount": "Вже є акаунт?",
+      "signInLink": "Увійти"
+    },
+    "adminLogin": {
+      "title": "Вхід адміністратора",
+      "submit": "Увійти",
+      "loading": "Вхід..."
+    }
+  },
+  "register": {
+    "title": "Записатися",
+    "name": "Ім'я та прізвище",
+    "namePlaceholder": "напр. Іван Коваленко",
+    "phone": "Телефон",
+    "phonePlaceholder": "напр. +48 123 456 789",
+    "cancel": "Скасувати",
+    "submit": "Надіслати",
+    "loading": "Відправка...",
+    "successMsg": "Заявку надіслано!",
+    "close": "Закрити",
+    "note": "Надсилаючи заявку, ви погоджуєтесь на обробку контактних даних з метою резервації."
   },
   "comingSoon": {
     "label": "В РОЗРОБЦІ",

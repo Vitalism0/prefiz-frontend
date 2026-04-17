@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import css from "./RegisterModal.module.css";
 import { registrationsApi } from "@/lib/kalendarz/registrationsApi";
 
@@ -17,6 +18,7 @@ export default function RegisterModal({
   eventId,
   eventTitle,
 }: Props) {
+  const t = useTranslations("register");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [status, setStatus] = useState<
@@ -42,7 +44,6 @@ export default function RegisterModal({
   }
 
   function handleClose() {
-    // optionally reset form on close
     setStatus("idle");
     setError("");
     setName("");
@@ -55,7 +56,7 @@ export default function RegisterModal({
       <div className={css.modal} onClick={(e) => e.stopPropagation()}>
         <div className={css.header}>
           <div>
-            <h3 className={css.title}>Zapisz się</h3>
+            <h3 className={css.title}>{t("title")}</h3>
             {eventTitle ? <p className={css.subtitle}>{eventTitle}</p> : null}
           </div>
 
@@ -67,39 +68,39 @@ export default function RegisterModal({
         <div className={css.content}>
           {status === "success" ? (
             <div>
-              <p className={css.success}>✅ Zgłoszenie wysłane!</p>
+              <p className={css.success}>✅ {t("successMsg")}</p>
               <div className={css.actions}>
                 <button
                   className={`${css.btn} ${css.primary}`}
                   onClick={handleClose}
                 >
-                  Zamknij
+                  {t("close")}
                 </button>
               </div>
             </div>
           ) : (
             <form className={css.form} onSubmit={onSubmit}>
               <label className={css.label}>
-                Imię i nazwisko
+                {t("name")}
                 <input
                   className={css.input}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
                   minLength={2}
-                  placeholder="np. Jan Kowalski"
+                  placeholder={t("namePlaceholder")}
                 />
               </label>
 
               <label className={css.label}>
-                Telefon
+                {t("phone")}
                 <input
                   className={css.input}
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   required
                   minLength={6}
-                  placeholder="np. +48 123 456 789"
+                  placeholder={t("phonePlaceholder")}
                 />
               </label>
 
@@ -112,21 +113,18 @@ export default function RegisterModal({
                   onClick={handleClose}
                   disabled={status === "loading"}
                 >
-                  Anuluj
+                  {t("cancel")}
                 </button>
                 <button
                   type="submit"
                   className={`${css.btn} ${css.primary}`}
                   disabled={status === "loading"}
                 >
-                  {status === "loading" ? "Wysyłanie..." : "Wyślij"}
+                  {status === "loading" ? t("loading") : t("submit")}
                 </button>
               </div>
 
-              <p className={css.note}>
-                Wysyłając zgłoszenie akceptujesz przetwarzanie danych
-                kontaktowych w celu rezerwacji.
-              </p>
+              <p className={css.note}>{t("note")}</p>
             </form>
           )}
         </div>

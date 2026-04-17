@@ -132,7 +132,7 @@ export default function KalendarzClient({ locale, initialMonth }: Props) {
   const handleDelete = async (id: string) => {
     if (!isAdmin) return;
 
-    const ok = confirm("Na pewno usunąć to wydarzenie?");
+    const ok = confirm(tc("confirmDelete"));
     if (!ok) return;
 
     setDeletingId(id);
@@ -173,7 +173,7 @@ export default function KalendarzClient({ locale, initialMonth }: Props) {
         {/* FILTERS */}
         <div className={css.filtersRow}>
           <div className={css.filter}>
-            <div className={css.filterLabel}>Rodzaj wydarzenia</div>
+            <div className={css.filterLabel}>{tc("filterType")}</div>
             <select
               className={css.select}
               value={type}
@@ -199,7 +199,7 @@ export default function KalendarzClient({ locale, initialMonth }: Props) {
           </div>
 
           <div className={css.filter}>
-            <div className={css.filterLabel}>Miejsce</div>
+            <div className={css.filterLabel}>{tc("filterPlace")}</div>
             <select
               className={css.select}
               value={place}
@@ -215,7 +215,7 @@ export default function KalendarzClient({ locale, initialMonth }: Props) {
           </div>
 
           <div className={css.filter}>
-            <div className={css.filterLabel}>Wiek</div>
+            <div className={css.filterLabel}>{tc("filterAge")}</div>
             <select
               className={css.select}
               value={ageGroup}
@@ -234,8 +234,8 @@ export default function KalendarzClient({ locale, initialMonth }: Props) {
         <div className={css.divider} />
 
         {/* LIST */}
-        {loading && <div className={css.empty}>Loading...</div>}
-        {error && <div className={css.empty}>Error: {error}</div>}
+        {loading && <div className={css.empty}>{tc("loading")}</div>}
+        {error && <div className={css.empty}>{tc("error")}: {error}</div>}
         {!loading && !error && (
           <EventList
             events={filtered}

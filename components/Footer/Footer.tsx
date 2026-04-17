@@ -22,6 +22,8 @@ export default function Footer() {
                 src="/logo-v6-cap-atom.svg"
                 alt="PreFiz"
                 className={css.logo}
+                width={220}
+                height={56}
               />
             </div>
 

@@ -22,7 +22,13 @@
     "type_all": "Wszystkie",
     "type_warsztat": "Warsztaty",
     "type_pokaz": "Pokazy",
-    "type_kurs_it": "Kursy IT"
+    "type_kurs_it": "Kursy IT",
+    "filterType": "Rodzaj wydarzenia",
+    "filterPlace": "Miejsce",
+    "filterAge": "Wiek",
+    "loading": "Ładowanie...",
+    "error": "Błąd",
+    "confirmDelete": "Na pewno usunąć to wydarzenie?"
   },
   "offerTiles": {
     "title": "Nasza oferta",
@@ -242,6 +248,46 @@
       "btnContact": "Napisz do nas",
       "btnOffer": "Zobacz ofertę"
     }
+  },
+  "auth": {
+    "signIn": {
+      "title": "Zaloguj się",
+      "subtitle": "Witaj ponownie! Wprowadź swoje dane.",
+      "email": "Email",
+      "password": "Hasło",
+      "submit": "Zaloguj się",
+      "loading": "Logowanie...",
+      "noAccount": "Nie masz jeszcze konta?",
+      "signUpLink": "Zarejestruj się"
+    },
+    "signUp": {
+      "title": "Zarejestruj się",
+      "subtitle": "Utwórz konto, aby zarządzać profilem.",
+      "email": "Email",
+      "password": "Hasło",
+      "submit": "Utwórz konto",
+      "loading": "Tworzenie...",
+      "hasAccount": "Masz już konto?",
+      "signInLink": "Zaloguj się"
+    },
+    "adminLogin": {
+      "title": "Logowanie administratora",
+      "submit": "Zaloguj",
+      "loading": "Logowanie..."
+    }
+  },
+  "register": {
+    "title": "Zapisz się",
+    "name": "Imię i nazwisko",
+    "namePlaceholder": "np. Jan Kowalski",
+    "phone": "Telefon",
+    "phonePlaceholder": "np. +48 123 456 789",
+    "cancel": "Anuluj",
+    "submit": "Wyślij",
+    "loading": "Wysyłanie...",
+    "successMsg": "Zgłoszenie wysłane!",
+    "close": "Zamknij",
+    "note": "Wysyłając zgłoszenie akceptujesz przetwarzanie danych kontaktowych w celu rezerwacji."
   },
   "comingSoon": {
     "label": "W BUDOWIE",

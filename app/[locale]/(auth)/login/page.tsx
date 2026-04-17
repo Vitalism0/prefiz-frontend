@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { login, me } from "@/lib/prefizApi";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 
 import css from "./styles.module.css";
@@ -20,6 +20,7 @@ type FormValues = z.infer<typeof Schema>;
 export default function AdminLoginPage() {
   const router = useRouter();
   const locale = useLocale();
+  const t = useTranslations("auth.adminLogin");
   const [serverError, setServerError] = useState<string | null>(null);
 
   const {
@@ -61,7 +62,7 @@ export default function AdminLoginPage() {
   return (
     <main className={css.page}>
       <div className={css.card}>
-        <h1 className={css.title}>Admin login</h1>
+        <h1 className={css.title}>{t("title")}</h1>
 
         <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
           <label className={css.label}>
@@ -87,13 +88,9 @@ export default function AdminLoginPage() {
           {serverError && <div className={css.serverErr}>{serverError}</div>}
 
           <button className={css.btn} type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Logging in..." : "Login"}
+            {isSubmitting ? t("loading") : t("submit")}
           </button>
         </form>
-
-        <p className={css.hint}>
-          Локально: використай admin credentials з бекенду (.env)
-        </p>
       </div>
     </main>
   );

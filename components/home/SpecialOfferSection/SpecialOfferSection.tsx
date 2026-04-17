@@ -37,6 +37,7 @@ export default function SpecialOfferSection() {
               height={260}
               className={css.img}
               priority={false}
+              style={{ width: "100%", height: "auto" }}
             />
           </div>
         </div>

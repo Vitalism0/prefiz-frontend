@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #cfe1f7;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .inner {
@@ -30,13 +30,13 @@
   width: 12px;
   height: 12px;
   border-radius: 999px;
-  background: #1a73e8;
+  background: var(--primary);
 }
 
 .brandText {
   font-size: 24px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
   letter-spacing: 0.2px;
 }
 
@@ -50,14 +50,14 @@
 .navLink {
   font-size: 16px;
   font-weight: 500;
-  color: #0f172a;
+  color: var(--text);
   padding: 6px 6px;
   border-radius: 8px;
   transition: background 120ms ease, opacity 120ms ease;
 }
 
 .navLink:hover {
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--surface-overlay);
   opacity: 1;
 }
 
@@ -84,7 +84,7 @@
 .authLink {
   font-size: 14px;
   font-weight: 600;
-  color: #0f172a;
+  color: var(--text);
   text-decoration: none;
   padding: 6px 8px;
   border-radius: 8px;
@@ -92,15 +92,15 @@
 }
 
 .authLink:hover {
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--surface-overlay);
 }
 
 .authBtn {
   font-size: 14px;
   font-weight: 600;
-  color: #0f172a;
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: var(--text);
+  background: var(--surface-glass);
+  border: 1px solid var(--border);
   padding: 6px 10px;
   border-radius: 10px;
   cursor: pointer;
@@ -111,7 +111,7 @@
 }
 
 .authBtn:hover {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--surface-glass-hover);
 }
 
 /* Burger button — only visible on mobile */
@@ -124,20 +124,20 @@
   border-radius: 10px;
   border: 1px solid rgba(15, 23, 42, 0.14);
   background: rgba(255, 255, 255, 0.55);
-  color: #0f172a;
+  color: var(--text);
   cursor: pointer;
   flex-shrink: 0;
   transition: background 120ms ease;
 }
 
 .burger:hover {
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--surface-glass-hover);
 }
 
 /* Mobile dropdown menu */
 .mobileMenu {
-  background: #cfe1f7;
-  border-top: 1px solid rgba(15, 23, 42, 0.1);
+  background: var(--header-bg);
+  border-top: 1px solid var(--border-soft);
   padding: 14px 16px 18px;
 }
 
@@ -151,7 +151,7 @@
 .mobileNavLink {
   font-size: 16px;
   font-weight: 500;
-  color: #0f172a;
+  color: var(--text);
   padding: 10px 12px;
   border-radius: 10px;
   transition: background 120ms ease;
@@ -160,7 +160,7 @@
 }
 
 .mobileNavLink:hover {
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--surface-overlay);
 }
 
 .mobileAuth {
@@ -168,7 +168,7 @@
   gap: 10px;
   flex-wrap: wrap;
   padding-top: 10px;
-  border-top: 1px solid rgba(15, 23, 42, 0.1);
+  border-top: 1px solid var(--border-soft);
 }
 
 .mobileAuthBtn {
@@ -182,16 +182,16 @@
   border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
-  color: #0f172a;
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: var(--text);
+  background: var(--surface-glass);
+  border: 1px solid var(--border);
   cursor: pointer;
   text-decoration: none;
   transition: background 120ms ease;
 }
 
 .mobileAuthBtn:hover {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--surface-glass-hover);
 }
 
 /* Responsive */

@@ -1,10 +1,10 @@
 .footer {
-  background: #cfe1f7;
+  background: var(--header-bg);
   padding: 36px 0;
 }
 
 .card {
-  background: #f8fbff;
+  background: var(--bg-alt);
   border-radius: 16px;
   padding: 26px 28px;
 
@@ -12,12 +12,8 @@
   grid-template-columns: 1.2fr 0.8fr;
   gap: 18px;
 
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  border: 1px solid var(--border-soft);
 }
-
-/* .left {
-  padding-right: 10px;
-} */
 
 .brandRow {
   display: flex;
@@ -35,12 +31,12 @@
 .brand {
   font-weight: 500;
   font-size: 24px;
-  color: #0f172a;
+  color: var(--text);
 }
 
 .desc {
   font-size: 16px;
-  color: #0f172a;
+  color: var(--text);
   max-width: 420px;
   margin: 0 0 14px;
   line-height: 1.45;
@@ -57,35 +53,35 @@
   flex: 1;
   height: 34px;
   border-radius: 10px;
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  background: #eef3fb;
+  border: 1px solid var(--border-soft);
+  background: var(--input-bg);
   padding: 0 12px;
   font-size: 12px;
   outline: none;
 }
 
 .input::placeholder {
-  color: #98a2b3;
+  color: var(--placeholder);
 }
 
 .button {
   height: 34px;
   padding: 0 14px;
   border-radius: 10px;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  background: #ffffff;
+  border: 1px solid var(--border);
+  background: var(--surface);
   font-size: 12px;
   font-weight: 600;
-  color: #0f172a;
+  color: var(--text);
 }
 
 .button:hover {
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--surface-glass-hover);
 }
 
 .note {
   font-size: 12px;
-  color: #0f172a;
+  color: var(--text);
   margin: 0 0 12px;
   max-width: 520px;
   line-height: 1.4;
@@ -93,7 +89,7 @@
 
 .copy {
   font-size: 10px;
-  color: #667085;
+  color: var(--muted);
   margin: 0;
 }
 
@@ -108,7 +104,7 @@
 .colTitle {
   font-size: 16px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
   margin: 6px 0 20px;
 }
 
@@ -122,7 +118,7 @@
 
 .link {
   font-size: 14px;
-  color: #0f172a;
+  color: var(--text);
   opacity: 0.85;
   text-decoration: none;
 }
@@ -138,7 +134,7 @@
   gap: 10px;
 
   font-size: 14px;
-  color: #0f172a;
+  color: var(--text);
   opacity: 0.85;
   text-decoration: none;
 }

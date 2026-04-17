@@ -16,7 +16,7 @@
 
   font-size: 12px;
   font-weight: 600;
-  color: #0f172a;
+  color: var(--text);
 
   transition:
     background 120ms ease,
@@ -24,7 +24,7 @@
 }
 
 .button:hover {
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--surface-overlay);
   border-color: rgba(15, 23, 42, 0.22);
 }
 
@@ -42,8 +42,8 @@
   padding: 6px;
 
   border-radius: 10px;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  background: #ffffff;
+  border: 1px solid var(--border);
+  background: var(--surface);
   box-shadow: 0 10px 25px rgba(2, 6, 23, 0.12);
 
   display: grid;
@@ -61,7 +61,7 @@
   border-radius: 8px;
   font-size: 12px;
   font-weight: 600;
-  color: #0f172a;
+  color: var(--text);
   opacity: 0.85;
 
   transition:
@@ -70,11 +70,11 @@
 }
 
 .item:hover {
-  background: rgba(26, 115, 232, 0.12);
+  background: var(--primary-soft);
   opacity: 1;
 }
 
 .active {
-  background: rgba(26, 115, 232, 0.18);
+  background: var(--primary-soft-strong);
   opacity: 1;
 }

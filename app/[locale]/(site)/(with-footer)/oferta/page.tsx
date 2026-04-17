@@ -35,7 +35,7 @@ export default async function OfertaPage() {
               {/* Podstawy Excel */}
               <div className={css.card}>
                 <img
-                  src="/images/oferta/Kursu Podstawy Excel (2).webp"
+                  src="/images/oferta/kurs-podstawy-excel.webp"
                   alt={t("courses.excel1.title")}
                   className={css.cardImage}
                 />
@@ -52,7 +52,7 @@ export default async function OfertaPage() {
               {/* Excel dla analizy */}
               <div className={css.card}>
                 <img
-                  src="/images/oferta/Kurs ' Excel dla analizy danych naukowych.webp"
+                  src="/images/oferta/kurs-excel-analiza-danych.webp"
                   alt={t("courses.excel2.title")}
                   className={css.cardImage}
                 />
@@ -69,7 +69,7 @@ export default async function OfertaPage() {
               {/* Figma */}
               <div className={css.card}>
                 <img
-                  src="/images/oferta/kurs  Figma dla poczatkujących.webp"
+                  src="/images/oferta/kurs-figma-poczatkujacy.webp"
                   alt={t("courses.figma.title")}
                   className={css.cardImage}
                 />
@@ -95,7 +95,7 @@ export default async function OfertaPage() {
               {/* Fizyka dla dzieci */}
               <div className={css.card}>
                 <img
-                  src="/images/oferta/Warsztaty z fizyki dla dzieci do lat 8.webp"
+                  src="/images/oferta/warsztaty-fizyka-dzieci.webp"
                   alt={t("courses.fizyka.title")}
                   className={css.cardImage}
                 />
@@ -112,7 +112,7 @@ export default async function OfertaPage() {
               {/* Elektrycznosc */}
               <div className={css.card}>
                 <img
-                  src="/images/oferta/Warsztaty Elektryczność i magnetyzm).webp"
+                  src="/images/oferta/warsztaty-elektrycznosc-magnetyzm.webp"
                   alt={t("courses.elektro.title")}
                   className={css.cardImage}
                 />
@@ -138,7 +138,7 @@ export default async function OfertaPage() {
               {/* Ciekly azot */}
               <div className={css.card}>
                 <img
-                  src="/images/oferta/Pokazy z fizyki niskich temperatur ( ciekły azot).webp"
+                  src="/images/oferta/pokaz-ciekly-azot.webp"
                   alt={t("courses.azot.title")}
                   className={css.cardImage}
                 />
